@@ -1,4 +1,4 @@
-//SPDX-Licens-Identifier:MIT
+//SPDX-License-Identifier:MIT
 pragma solidity 0.8.7;
 
 //Importing the ERC20 contract 
@@ -8,7 +8,7 @@ import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 //And minting the 1000000 tokens to the deployer address
 contract BatToken is ERC20{
     constructor() ERC20("BAT", "BT") {
-        _mint(msg.sender, 1000000);
+        _mint(msg.sender, 100000);
     }
 }
     

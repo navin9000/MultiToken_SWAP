@@ -1,4 +1,4 @@
-//SPDX-Licens-Identifier:MIT
+//SPDX-License-Identifier:MIT
 pragma solidity 0.8.7;
 
 //Importing the ERC20 contract 

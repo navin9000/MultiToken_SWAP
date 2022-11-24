@@ -365,115 +365,6 @@
         "ReentrancyGuard"
       ]
     },
-    "D:\\local-hardhat\\project\\contracts\\WhiteList.sol": {
-      "lastModificationDate": 1664851180663,
-      "contentHash": "ca35e8d7cc0c3137b11d9539a161ae04",
-      "sourceName": "contracts/WhiteList.sol",
-      "solcConfig": {
-        "version": "0.8.7",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "0.8.7"
-      ],
-      "artifacts": [
-        "WhiteList"
-      ]
-    },
-    "D:\\local-hardhat\\project\\contracts\\storageSlots.sol": {
-      "lastModificationDate": 1666263274870,
-      "contentHash": "43b3be9564f04374ce5af9af0b9b47de",
-      "sourceName": "contracts/storageSlots.sol",
-      "solcConfig": {
-        "version": "0.8.7",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "0.8.7"
-      ],
-      "artifacts": [
-        "storageSlot"
-      ]
-    },
-    "D:\\local-hardhat\\project\\contracts\\unstoppable\\UnstoppableLender.sol": {
-      "lastModificationDate": 1667123234937,
-      "contentHash": "f66401c6af7245eb275ec8a5e53c4057",
-      "sourceName": "contracts/unstoppable/UnstoppableLender.sol",
-      "solcConfig": {
-        "version": "0.8.7",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "@openzeppelin/contracts/token/ERC20/IERC20.sol",
-        "@openzeppelin/contracts/security/ReentrancyGuard.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "IReceiver",
-        "UnstoppableLender"
-      ]
-    },
     "D:\\local-hardhat\\project\\node_modules\\@openzeppelin\\contracts\\token\\ERC20\\IERC20.sol": {
       "lastModificationDate": 1659514205599,
       "contentHash": "ad7c2d0af148c8f9f097d65deeb4da6b",
@@ -508,295 +399,6 @@
       "artifacts": [
         "IERC20"
       ]
-    },
-    "D:\\local-hardhat\\project\\contracts\\unstoppable\\ReceiverUnstoppable.sol": {
-      "lastModificationDate": 1667123233265,
-      "contentHash": "fa66f59c8fd5f9d4b4188b0459ab212c",
-      "sourceName": "contracts/unstoppable/ReceiverUnstoppable.sol",
-      "solcConfig": {
-        "version": "0.8.7",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "../unstoppable/UnstoppableLender.sol",
-        "@openzeppelin/contracts/token/ERC20/IERC20.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "ReceiverUnstoppable"
-      ]
-    },
-    "D:\\local-hardhat\\project\\contracts\\Assignment\\Register.sol": {
-      "lastModificationDate": 1667872835391,
-      "contentHash": "89cafedcc7ae19dfe42da1503d3a6b9f",
-      "sourceName": "contracts/Assignment/Register.sol",
-      "solcConfig": {
-        "version": "0.8.7",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "0.8.7"
-      ],
-      "artifacts": [
-        "RegisterAndLogin"
-      ]
-    },
-    "D:\\local-hardhat\\project\\contracts\\NFTMarketPlace\\NFTcontract.sol": {
-      "lastModificationDate": 1667280699807,
-      "contentHash": "f808e2fa6671b51be2ffa64bd07c2f18",
-      "sourceName": "contracts/NFTMarketPlace/NFTcontract.sol",
-      "solcConfig": {
-        "version": "0.8.7",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "@openzeppelin/contracts/token/ERC721/ERC721.sol",
-        "@openzeppelin/contracts/utils/Strings.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.7"
-      ],
-      "artifacts": [
-        "NFT"
-      ]
-    },
-    "D:\\local-hardhat\\project\\contracts\\NFTMarketPlace\\RentalNFTMarketplace.sol": {
-      "lastModificationDate": 1667280725455,
-      "contentHash": "8e7df36d7a4e9caa5114c96104c3db78",
-      "sourceName": "contracts/NFTMarketPlace/RentalNFTMarketplace.sol",
-      "solcConfig": {
-        "version": "0.8.7",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "./NFTcontract.sol"
-      ],
-      "versionPragmas": [
-        "0.8.7"
-      ],
-      "artifacts": [
-        "RentalNFTMarketplace"
-      ]
-    },
-    "D:\\local-hardhat\\project\\contracts\\NFTMarketPlace\\NFTmarketplace.sol": {
-      "lastModificationDate": 1667280715596,
-      "contentHash": "f805b40f2dc4e83c458d09056745822d",
-      "sourceName": "contracts/NFTMarketPlace/NFTmarketplace.sol",
-      "solcConfig": {
-        "version": "0.8.7",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "@openzeppelin/contracts/security/ReentrancyGuard.sol",
-        "./NFTcontract.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.7"
-      ],
-      "artifacts": [
-        "NFTMarketplace"
-      ]
-    },
-    "D:\\local-hardhat\\project\\contracts\\NFTMarketPlace\\reward_funding.sol": {
-      "lastModificationDate": 1667280734419,
-      "contentHash": "077738c566d84ccafb1d8fc8b41bc1f7",
-      "sourceName": "contracts/NFTMarketPlace/reward_funding.sol",
-      "solcConfig": {
-        "version": "0.8.7",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "@openzeppelin/contracts/token/ERC721/ERC721.sol"
-      ],
-      "versionPragmas": [
-        "0.8.7"
-      ],
-      "artifacts": [
-        "Funding"
-      ]
-    },
-    "D:\\local-hardhat\\project\\contracts\\NFTMarketPlace\\storage.sol": {
-      "lastModificationDate": 1667280740252,
-      "contentHash": "b873119ce658b2ee86ccf1c9569bba31",
-      "sourceName": "contracts/NFTMarketPlace/storage.sol",
-      "solcConfig": {
-        "version": "0.8.7",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.7"
-      ],
-      "artifacts": [
-        "A"
-      ]
-    },
-    "D:\\local-hardhat\\project\\contracts\\NFTMarketPlace\\TimeBased.sol": {
-      "lastModificationDate": 1667280746899,
-      "contentHash": "1dd46388bda344a658be0a3726a2aa37",
-      "sourceName": "contracts/NFTMarketPlace/TimeBased.sol",
-      "solcConfig": {
-        "version": "0.8.7",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [],
-      "artifacts": []
     },
     "D:\\local-hardhat\\project\\node_modules\\@openzeppelin\\contracts\\token\\ERC20\\extensions\\IERC20Metadata.sol": {
       "lastModificationDate": 1659514205607,
@@ -874,10 +476,10 @@
         "ERC20"
       ]
     },
-    "D:\\local-hardhat\\project\\contracts\\uniswapV1\\token.sol": {
-      "lastModificationDate": 1668077628380,
-      "contentHash": "eb48a655a1b04e61c04f2eeae2f7154d",
-      "sourceName": "contracts/uniswapV1/token.sol",
+    "D:\\local-hardhat\\project\\contracts\\Apple.sol": {
+      "lastModificationDate": 1669283195901,
+      "contentHash": "bb85e9ea80b1797961a62719989e1189",
+      "sourceName": "contracts/Apple.sol",
       "solcConfig": {
         "version": "0.8.7",
         "settings": {
@@ -908,13 +510,13 @@
         "0.8.7"
       ],
       "artifacts": [
-        "Token"
+        "AppleToken"
       ]
     },
-    "D:\\local-hardhat\\project\\contracts\\uniswapV1\\exchange.sol": {
-      "lastModificationDate": 1668186312555,
-      "contentHash": "faef39fd81b76728763e6d6d4b6679be",
-      "sourceName": "contracts/uniswapV1/exchange.sol",
+    "D:\\local-hardhat\\project\\contracts\\SwappingContract.sol": {
+      "lastModificationDate": 1669290098259,
+      "contentHash": "754424d3774b682da1e380a1f3e59f41",
+      "sourceName": "contracts/SwappingContract.sol",
       "solcConfig": {
         "version": "0.8.7",
         "settings": {
@@ -939,13 +541,51 @@
         }
       },
       "imports": [
-        "@openzeppelin/contracts/token/ERC20/IERC20.sol"
+        "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "@openzeppelin/contracts/token/ERC20/ERC20.sol"
       ],
       "versionPragmas": [
         "0.8.7"
       ],
       "artifacts": [
-        "Exchange"
+        "SwappingTokens"
+      ]
+    },
+    "D:\\local-hardhat\\project\\contracts\\Bat.sol": {
+      "lastModificationDate": 1669285335075,
+      "contentHash": "adb319c7f905627e7b905685bca25def",
+      "sourceName": "contracts/Bat.sol",
+      "solcConfig": {
+        "version": "0.8.7",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC20/ERC20.sol"
+      ],
+      "versionPragmas": [
+        "0.8.7"
+      ],
+      "artifacts": [
+        "BatToken"
       ]
     }
   }

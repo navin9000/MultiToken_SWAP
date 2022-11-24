@@ -1,65 +1,80 @@
-//SPDX-License-Identifer:MIT
+//SPDX-License-Identifier:MIT
 pragma solidity 0.8.7;
 
 //Here importing the IERC20 interface 
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+//Importing the ERC20 contract 
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
-//I have divided it into 
-//1.setting the price of token "CAR"  to default 1
-//2.Getting the price of token "CAR" 
 
-//NOTE : this swappingTokens contract is nothing but pool
+contract SwappingTokens is ERC20{
+    uint256 public carTokenPrice;                    //default CAR token price=1
+    address public owner;                            // deployer of the contract
 
-contract SwappingTokens{
-    address public appleTokenAddress;                  //token address of apple token
-    address public batTokenAddress;                    //token address of bat token
-    address public carTokenAddress;                    //token address of car token
-    uint256 public carTokenPrice=1;                    //default CAR token price=1
-
-    //STEP-1 :getting the token contract addresses
-     constructor(address _appleTokenAddress,address _batTokenAddress,address _carTokenAddress){
-        require(_appleTokenAddress!=address(0) && _batTokenAddress!=address(0) && _carTokenAddress!=address(0),"invalid token address");
-        appleTokenAddress=_appleTokenAddress;
-        batTokenAddress=_batTokenAddress;
-        carTokenAddress=_carTokenAddress;
+    //STEP-1 :Creating the "CAR" contract with unlimited supply of tokens
+     constructor()ERC20("CAR","CR"){
+        carTokenPrice=1;
+        owner=msg.sender;
     }
 
-    //STEP-2 :Adding liquidity
-
-    //STEP-2.1 : Adding AP/CR liquidity to the pool
-    //NOTE: the liquidity provider should approve the swapping contract to use the tokens
-    function apple_To_Car_Liquidity(address _apTokenAddress,uint256 _apTokenAMt,address _crTokenAddress,uint256 _crTokenAmt)external{
-
+    //modifier
+    //To check the owner
+    modifier onlyOwner{
+        require(msg.sender==owner,"you are not the owner");
+        _;
     }
 
-    //STEP-2.2 : Adding BT/CR liquidity to the pool
-    //NOTE: the liquidity provider should approve the swapping contract to use the tokens
-    function bat_To_Car_Liquidity(address _apTokenAddress,uint256 _apTokenAMt,address _crTokenAddress,uint256 _crTokenAmt)external{
-        
-    }
 
-    //STEP-3 : getting the "CAR" token reserves
-    
-
-    //STEP-4 : swapping "APPLE" || "BAT" => "CAR"
+    //STEP-2 : swapping "APPLE" || "BAT" => "CAR"
+    //Before swapping tokens to "CAR" tokens the token contract should approve the swapping contract to spend
+    //Working of swap() function:
+    // 1.checking for _token address is valid or not
+    // 2.getting price of car Token
+    // 3.carToken = amount/price is the formula to mint the desired no of car tokens
+    // 4.minting the cartokens
+    // 5.Before all this, the user should approve the swapping contract to use the funds behalf of user
+    // 6. The transferFrom function calls and sends the AP/BT tokens to the contract.
     function swap(address _token,uint amount)external{
-
+        require(_token!=address(0),"invalid token addresss");
+        uint256 price= getCarPrice();
+        uint256 carTokenAmt = amount/price;
+        _mint(msg.sender,carTokenAmt);                                                   //here minting "CAR" tokens to the caller
+        bool check = IERC20(_token).transferFrom(msg.sender,address(this),amount);    
+        require(check,"transferFrom failed");                                            //getting  the tokens approved to contract 
     }
 
-    //STEP-5: unswaping the swapped tokens
+
+    //STEP-3: unswaping the swapped tokens
+    //Here the "CAR" tokens are going to burn and transfering the approved tokens back
+    //"convert the amount of the output token to an equivalent amount of input _token"
+    //Working of unSwap():
+    // 1.amount < balanceOf(msg.sedner)
+    // 2.if price car token is not hanged, user get the equivalent amount of tokens AP/BT
+    //   else, the user required to use less CR to unswap to get more AP/BT
+    // 3.tokens=amount*price;
+    // 4.contract balance checking, is it having enough funds or not 
+    // 5.transfering the tokens to msg.sender 
+    // 6.the car tokens are burnt, so totalSupply decreases
     function unSwap(address _token, uint amount)external{
-
+        require(_token!=address(0),"invalid token addresss");
+        require(amount <= balanceOf(msg.sender),"insuffiecient balance");
+        uint256 price= getCarPrice();
+        uint256 tokensToTransfer = amount*price;
+        uint256 balance=IERC20(_token).balanceOf(address(this));
+        require(tokensToTransfer<=balance,"car token price increased, insufficient balance in contract");
+        IERC20(_token).transfer(msg.sender,tokensToTransfer);                  
+        _burn(msg.sender,amount);                                           
     }
 
-    //getting the APPLE, BAT, CAR token address 
-    //Setting CAR price
-    function setCarPrice(uint _price)external returns(uint256 price_){
+    //STEP-4:
+    //Setting carTokenPrice
+    function setCarPrice(uint256 _price)external onlyOwner{
+        require(_price>1,"check the price");
         carTokenPrice=_price;
-        return carTokenPrice;
     }
-
+    //STEP-5:
     //Getting the carTokenPrice
-    function getCarPrice()external view returns(uint256 price_){
+    function getCarPrice()public view returns(uint256 price_){
         return carTokenPrice;
     }
 }
