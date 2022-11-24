@@ -44,7 +44,7 @@ contract SwappingTokens is ERC20{
     }
 
 
-    //STEP-3: unswaping the swapped tokens
+    //STEP-3: unswaping the swapped tokens CAR --> APPLE/BAT
     //Here the "CAR" tokens are going to burn and transfering the approved tokens back
     //"convert the amount of the output token to an equivalent amount of input _token"
     //Working of unSwap():
